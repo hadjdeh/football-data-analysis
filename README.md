@@ -17,5 +17,5 @@ The `Pass_map` directory contains Jupyter notebooks and datasets used for creati
 For a detailed walkthrough of the pass map creation process, check out my Medium articles:
 
 - [Article 1](https://medium.com/@footsci/passing-networks-with-expected-threat-xt-layer-7d699f75387b): Passing networks with expected threat (xT) layer. Walking through popular templates. Explaining the details.
-- [Article 2]:
+- [Article 2](https://footsci.medium.com/a-detailed-guide-to-creating-advanced-pass-maps-with-python-and-matplotlib-731d6aa71a94): A Detailed Guide to Creating Advanced Pass Maps with Python and Matplotlib
 
