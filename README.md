@@ -12,7 +12,7 @@ The `Pass_map` directory contains Jupyter notebooks and datasets used for creati
 
 - `1. Pass map creating v1.20240221.ipynb`: Notebook for pass map visualization.
 - `data/`: Directory containing raw event data files for match Man City 1:1 Chelsea | Premier League | Season 2023-2024 | 2024-02-17
-- `img/`: Directory containing resulting pass_map.jpeg and reference map from the Athletic teamplate
+- `img/`: Directory containing resulting `pass_map.jpeg` and reference map from the Athletic teamplate the `Athletic pass map.jpeg`
 
 For a detailed walkthrough of the pass map creation process, check out my Medium articles:
 
