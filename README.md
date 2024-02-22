@@ -1,4 +1,4 @@
-Football Analysis Projects
+**Football Analysis Projects**
 ==========================
 
 Overview
