@@ -8,7 +8,7 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 
 ## Pass_map 
 
-The `Pass_map` directory contains Jupyter notebooks and datasets used for creating advanced pass maps. Key components include:
+The `Pass_map` directory contains Jupyter notebooks and datasets used for creating advanced pass maps (passing network map). Key components include:
 
 - `1. Pass map creating v1.20240221.ipynb`: Notebook for pass map visualization.
 - `data/`: Directory containing raw event data files for match Man City 1:1 Chelsea | Premier League | Season 2023-2024 | 2024-02-17
