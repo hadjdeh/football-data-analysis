@@ -29,7 +29,7 @@ The `Scraping_fbref_static_data` directory facilitates the collection of compreh
 
 Key Components:
 - `utils/`: Contains Python utility file with functions essential for data scraping and manipulation.
-- `notebooks/`: Features Jupyter notebook that guides users through the scraping process
+- `notebooks/`: Features Jupyter notebook that guides users through the scraping process (based on https://github.com/parth1902/Scrape-FBref-data/blob/master/Scrape_FBref.ipynb)
 - `img/`: Provides screenshots from the FBRef website, offering insights into the tables and statistics being collected, facilitating a better understanding of the data's structure and content.
 - `data/old_seasons/`: Stores historical data for the top 5 European leagues from the 2018-2019 season to the 2022-2023 season, including:
   - `top5_leagues_keeper_2018_2019__2022_2023.csv`: Goalkeeper statistics for the last five seasons.
