@@ -23,4 +23,27 @@ For a detailed walkthrough of the pass map creation process, check out my Medium
 
 <img src="/Pass_map/img/pass_map.jpeg" width="60%" height="auto">
 
+## 2. Scraping_fbref_static_data
+
+The `Scraping_fbref_static_data` directory facilitates the collection of comprehensive football statistics from FBRef, targeting the top 5 European leagues. It includes data spanning the last five seasons and up-to-date statistics for the current season (as of March 2, 2024). 
+
+Key Components:
+- `utils/`: Contains Python utility file with functions essential for data scraping and manipulation.
+- `notebooks/`: Features Jupyter notebook that guides users through the scraping process
+- `img/`: Provides screenshots from the FBRef website, offering insights into the tables and statistics being collected, facilitating a better understanding of the data's structure and content.
+- `data/old_seasons/`: Stores historical data for the top 5 European leagues from the 2018-2019 season to the 2022-2023 season, including:
+  - `top5_leagues_keeper_2018_2019__2022_2023.csv`: Goalkeeper statistics for the last five seasons.
+  - `top5_leagues_outfields_2018_2019__2022_2023.csv`: Outfield player statistics.
+  - `top5_leagues_team_2018_2019__2022_2023.csv`: Team-level statistics.
+  - `top5_leagues_team_vs_2018_2019__2022_2023.csv`: Team versus team statistics.
+- `data/current_season/{date}`/: Contains the latest season's data, structured as follows:
+  - `top5_leagues_keeper_2023_2024.csv`: Current season goalkeeper statistics.
+  - `top5_leagues_outfields_2023_2024.csv`: Outfield player statistics.
+  - `top5_leagues_team_2023_2024.csv`: Team-level statistics.
+  - `top5_leagues_team_vs_2023_2024.csv`: Team versus team statistics.
+    
+### Performance and Usage Advice
+Data Collection Time (MacBook Air M1 8GB): Collecting the entire dataset for the last five seasons requires approximately 1.5 hours, while updating with the current season's data takes about 20 minutes (4 minute for 1 league and 1 minute if you need just Outfield data for example). This process can be expedited by leveraging multiprocessing.
+
+Data Utilization: It is recommended to use the already available data for the past five seasons and only update with the actual data for the current season.
 
