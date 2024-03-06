@@ -13,9 +13,8 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 | Goals | Description | Plan             | Status |
 |-------|-------------|------------------|--------|
 | Examples of Data Processing and Visualization |1)Develop Team Radar Template<br> 2)Integrate Distribution on Radar Template<br>3)Create Player Templates<br>4)Interpolation of Carries on Event Data<br>5)Identification of Possession Chains<br>6)TBD|
-| Data Warehousing | 1)Design data warehouse architecture for integrating football data sources<br>2)  |
-|  Advanced Analytics | Build and validate an Up-to-Date VAEP Model |
-| Data Management | - Load historical data into the warehouse<br>- Launch regular data loading processes |
+| Data Management	 | 1)Design data warehouse architecture for integrating football data sources<br>2)Load historical data into the warehouse<br>Launch regular data loading processes<br>TBD  |
+|  Advanced Analytics | 1) Build xT transition matrix<br>2)Build an Up-to-Date VAEP Model<br>3)Increasing quality of VAEP |
 | Innovation and Dissemination | - Pilot a Twitter Bot for automated posting |
 |  Community Engagement | - Foster a community of contributors |
 | | Quality Assurance | - Implement robust testing and validation processes |
