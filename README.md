@@ -10,14 +10,14 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 # Project Roadmap
 
 
-| Time Frame | Goals | Description |
-|------------|-------|-------------|
-| **Short-Term Goals**<br>(Next 3-6 Months) | Data Processing and Visualization Enhancements |1)Develop Team Radar Template<br> 2)Integrate Distribution on Team Radar Template<br>3)Create Player Templates<br>4)Implement Interpolation of Carries on Event Data<br>5)Define Possession Chains6)TBD|
-| | Data Warehousing | - Design data warehouse architecture for integrating football data sources |
-| **Medium-Term Goals**<br>(Next 6-12 Months) | Advanced Analytics | - Build and validate an Up-to-Date VAEP Model |
-| | Data Management | - Load historical data into the warehouse<br>- Launch regular data loading processes |
-| **Long-Term Goals**<br>(1 Year+) | Innovation and Dissemination | - Pilot a Twitter Bot for automated posting |
-| **Continuous Objectives** | Community Engagement | - Foster a community of contributors |
+| Goals | Description | Plan | Status |
+|-------|-------------|------|--------|
+| Data Processing and Visualization Enhancements |1)Develop Team Radar Template<br> 2)Integrate Distribution on Team Radar Template<br>3)Create Player Templates<br>4)Implement Interpolation of Carries on Event Data<br>5)Define Possession Chains<br>6)TBD|
+| Data Warehousing | - Design data warehouse architecture for integrating football data sources |
+|  Advanced Analytics | - Build and validate an Up-to-Date VAEP Model |
+| Data Management | - Load historical data into the warehouse<br>- Launch regular data loading processes |
+| Innovation and Dissemination | - Pilot a Twitter Bot for automated posting |
+|  Community Engagement | - Foster a community of contributors |
 | | Quality Assurance | - Implement robust testing and validation processes |
 | | Documentation and Tutorials | - Develop comprehensive guides and tutorials |
 
