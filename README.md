@@ -9,17 +9,15 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 
 # Project Roadmap
 
-
-| Goals                                | Description                                                           | Plan                                                                                              | Status  |
-|--------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------|
-| **Data Processing and Visualization**| Develop visualization templates and methods for dynamic metric analysis. | 3) Develop Team Radar Template <br> 4) Integrate Distribution on Radar Template <br> 5) Create Player Templates <br> 6) Interpolate Carries on Event Data <br> 7) Identify Possession Chains <br> 8) Visualize Dynamic Metric Changes (xT, xG) <br> 9) TBD | In Progress |
-| **Data Management**                  | Design and implement a data warehousing solution for football data sources. | 1) Design data warehouse architecture <br> 2) Load historical data into the warehouse <br> 3) Launch regular data loading processes <br> TBD | Planned  |
-| **Advanced Analytics**               | Enhance analytical models for performance assessment.                 | 1) Build xT transition matrix <br> 2) Build an Up-to-Date VAEP Model <br> 3) Increase quality of VAEP | Planned  |
-| **Innovation and Dissemination**     | Utilize innovative channels for disseminating analytics insights.     | - Pilot a Twitter Bot for automated posting                                                         | Planned  |
-| **Community Engagement**             | Engage and grow the project's contributor community.                  | - Foster a community of contributors                                                               | Ongoing |
-| **Quality Assurance**                | Ensure the reliability and accuracy of analytics outputs.             | - Implement robust testing and validation processes                                                 | Ongoing |
-| **Documentation and Tutorials**      | Provide comprehensive guides for utilizing the analytics tools.      | - Develop comprehensive guides and tutorials                                                        | Ongoing |
-
+| Goal | Item Description | Planned Date | Status |
+|------|------------------|--------------|--------|
+| Data Processing and Visualization | Develop Team Radar Template | Date1 | In Progress |
+| | Integrate Distribution on Radar Template | Date2 | Planned |
+| | Create Player Templates | Date3 | Planned |
+| | Interpolate Carries on Event Data | Date4 | In Progress |
+| | Identify Possession Chains | Date5 | Planned |
+| | Visualize Dynamic Metric Changes (xT, xG) | Date6 | Planned |
+| | TBD | Date7 | TBD |
 
 
 ## 1. Pass_map 
