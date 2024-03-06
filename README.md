@@ -10,8 +10,8 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 # Project Roadmap
 
 
-| Goals | Description | Plan | Status |
-|-------|-------------|------|--------|
+| Goals | Description | Plan             | Status |
+|-------|-------------|------------------|--------|
 | Data Processing and Visualization Enhancements |1)Develop Team Radar Template<br> 2)Integrate Distribution on Team Radar Template<br>3)Create Player Templates<br>4)Implement Interpolation of Carries on Event Data<br>5)Define Possession Chains<br>6)TBD|
 | Data Warehousing | - Design data warehouse architecture for integrating football data sources |
 |  Advanced Analytics | - Build and validate an Up-to-Date VAEP Model |
