@@ -6,6 +6,22 @@ Overview
 
 This repository is dedicated to football data analysis, showcasing various Jupyter notebooks that detail the handling and visualization of football data from multiple perspectives. Through these projects, we explore different facets of football analytics, including creating sophisticated pass maps, evaluating player performance metrics, and more, using Python and libraries like Matplotlib and mplsoccer.
 
+
+# Project Roadmap
+
+
+| Time Frame | Goals | Description |
+|------------|-------|-------------|
+| **Short-Term Goals**<br>(Next 3-6 Months) | Data Processing and Visualization Enhancements |1) <p>Develop Team Radar Template<br\> 2)Integrate Distribution on Team Radar Template<br>- Create Player Templates<br>- Implement Interpolation of Carries on Event Data<br>- Define Possession Chains |
+| | Data Warehousing | - Design data warehouse architecture for integrating football data sources |
+| **Medium-Term Goals**<br>(Next 6-12 Months) | Advanced Analytics | - Build and validate an Up-to-Date VAEP Model |
+| | Data Management | - Load historical data into the warehouse<br>- Launch regular data loading processes |
+| **Long-Term Goals**<br>(1 Year+) | Innovation and Dissemination | - Pilot a Twitter Bot for automated posting |
+| **Continuous Objectives** | Community Engagement | - Foster a community of contributors |
+| | Quality Assurance | - Implement robust testing and validation processes |
+| | Documentation and Tutorials | - Develop comprehensive guides and tutorials |
+
+
 ## 1. Pass_map 
 
 The `Pass_map` directory contains Jupyter notebooks and datasets used for creating advanced pass maps (passing network map). Key components include:
