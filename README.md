@@ -12,7 +12,7 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 
 | Time Frame | Goals | Description |
 |------------|-------|-------------|
-| **Short-Term Goals**<br>(Next 3-6 Months) | Data Processing and Visualization Enhancements |1) <p>Develop Team Radar Template<br\> 2)Integrate Distribution on Team Radar Template<br>- Create Player Templates<br>- Implement Interpolation of Carries on Event Data<br>- Define Possession Chains |
+| **Short-Term Goals**<br>(Next 3-6 Months) | Data Processing and Visualization Enhancements |1)Develop Team Radar Template<br\> 2)Integrate Distribution on Team Radar Template<br>- Create Player Templates<br>- Implement Interpolation of Carries on Event Data<br>- Define Possession Chains |
 | | Data Warehousing | - Design data warehouse architecture for integrating football data sources |
 | **Medium-Term Goals**<br>(Next 6-12 Months) | Advanced Analytics | - Build and validate an Up-to-Date VAEP Model |
 | | Data Management | - Load historical data into the warehouse<br>- Launch regular data loading processes |
