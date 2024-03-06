@@ -9,16 +9,30 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 
 # Project Roadmap
 
-| Goal | Item Description                                   | Planned Date | Status      |
-|------|----------------------------------------------------|--------------|-------------|
-| Data Processing and Visualization |                                                  |              |             |
-|      | Develop Team Radar Template                        | Date1        | In Progress |
-|      | Integrate Distribution on Radar Template           | Date2        | Planned     |
-|      | Create Player Templates                            | Date3        | Planned     |
-|      | Interpolate Carries on Event Data                  | Date4        | In Progress |
-|      | Identify Possession Chains                         | Date5        | Planned     |
-|      | Visualize Dynamic Metric Changes (xT, xG)           | Date6        | Planned     |
-|      | TBD                                                | Date7        | TBD         |
+| Field                            | Tasks                                           | Planned Date | Status  | Artefacts                                                                                      |
+|----------------------------------|-------------------------------------------------|--------------|---------|------------------------------------------------------------------------------------------------|
+| **Data Processing and Visualization** | Develop Pass Map Template                     | 2024-03-01   | Done    | [Link to Directory](https://github.com/hadjdeh/football-data-analysis/tree/main/Pass_map)         |
+|                                  | Scraping Static FBref Data                     | 2024-03-01   | Done    | [Link to Directory](https://github.com/hadjdeh/football-data-analysis/tree/main/Scraping_fbref_static_data)   |
+|                                  | Develop Team Radar Template                    | Date1        | In Progress |                                                                                              |
+|                                  | Integrate Distribution on Radar Template       | Date2        | Planned |                                                                                              |
+|                                  | Create Player Templates                        | Date3        | Planned |                                                                                              |
+|                                  | Interpolate Carries on Event Data              | Date4        | In Progress |                                                                                              |
+|                                  | Identify Possession Chains                     | Date5        | Planned |                                                                                              |
+|                                  | Visualize Dynamic Metric Changes (xT, xG)      | Date6        | Planned |                                                                                              |
+|                                  | TBD                                             | Date7        | TBD     |                                                                                              |
+| **Data Management**               | Design data warehouse architecture             | 2024-04-01   | To do   |                                                                                              |
+|                                  | Load historical data into the warehouse        | 2024-04-07   | To do   |                                                                                              |
+|                                  | Launch regular data loading processes          | 2024-04-07   | To do   |                                                                                              |
+|                                  | Quality Assurance                               | 2024-05-01   | To do   |                                                                                              |
+|                                  | TBD                                             |              | To do   |                                                                                              |
+| **Advanced Analytics**            | Build xT transition matrix                     | 2024-03-01   | Done    |                                                                                              |
+|                                  | Build an Up-to-Date baseline VAEP Model        | 2024-03-23   | To do   |                                                                                              |
+|                                  | Increasing quality of VAEP                      | 2024-05-01   | To do   |                                                                                              |
+|                                  | TBD                                             |              |         |                                                                                              |
+| **Automation & Integration**      | Pilot a Twitter Bot for automated posting      | 2024-04-13   | To do   |                                                                                              |
+|                                  | Pilot a Telegram Bot for automated posting     | 2024-04-20   | To do   |                                                                                              |
+|                                  | TBD                                             |              |         |                                                                                              |
+
 
 
 
