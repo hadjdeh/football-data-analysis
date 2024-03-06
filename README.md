@@ -9,15 +9,17 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 
 # Project Roadmap
 
-| Goal                               | Item Description                         | Planned Date | Status      |
-|------------------------------------|------------------------------------------|--------------|-------------|
-|                                    | Develop Team Radar Template              | Date1        | In Progress |
-| Data Processing and Visualization  | Integrate Distribution on Radar Template | Date2        | Planned     |
-|                                    | Create Player Templates                  | Date3        | Planned     |
-|                                    | Interpolate Carries on Event Data        | Date4        | In Progress |
-|                                    | Identify Possession Chains               | Date5        | Planned     |
-|                                    | Visualize Dynamic Metric Changes (xT, xG)| Date6        | Planned     |
-|                                    | TBD                                      | Date7        | TBD         |
+| Goal | Item Description                                   | Planned Date | Status      |
+|------|----------------------------------------------------|--------------|-------------|
+| Data Processing and Visualization |                                                  |              |             |
+|      | Develop Team Radar Template                        | Date1        | In Progress |
+|      | Integrate Distribution on Radar Template           | Date2        | Planned     |
+|      | Create Player Templates                            | Date3        | Planned     |
+|      | Interpolate Carries on Event Data                  | Date4        | In Progress |
+|      | Identify Possession Chains                         | Date5        | Planned     |
+|      | Visualize Dynamic Metric Changes (xT, xG)           | Date6        | Planned     |
+|      | TBD                                                | Date7        | TBD         |
+
 
 
 
