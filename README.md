@@ -10,15 +10,16 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 # Project Roadmap
 
 
-| Goals | Description | Plan             | Status |
-|-------|-------------|------------------|--------|
-| Examples of Data Processing and Visualization |3)Develop Team Radar Template<br> 4)Integrate Distribution on Radar Template<br>5)Create Player Templates<br>6)Interpolation of Carries on Event Data<br>7)Identification of Possession Chains<br>8)Dynamic Metric Visualization (xT, xG) <br>9)TBD|
-| Data Management	 | 1)Design data warehouse architecture for integrating football data sources<br>2)Load historical data into the warehouse<br>3)Launch regular data loading processes<br>TBD  |
-|  Advanced Analytics | 1) Build xT transition matrix<br>2)Build an Up-to-Date VAEP Model<br>3)Increasing quality of VAEP |
-| Innovation and Dissemination |- Pilot a Twitter Bot for automated posting |
-|  Community Engagement | - Foster a community of contributors |
-| | Quality Assurance | - Implement robust testing and validation processes |
-| | Documentation and Tutorials | - Develop comprehensive guides and tutorials |
+| Goals                                | Description                                                           | Plan                                                                                              | Status  |
+|--------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------|
+| **Data Processing and Visualization**| Develop visualization templates and methods for dynamic metric analysis. | 3) Develop Team Radar Template <br> 4) Integrate Distribution on Radar Template <br> 5) Create Player Templates <br> 6) Interpolate Carries on Event Data <br> 7) Identify Possession Chains <br> 8) Visualize Dynamic Metric Changes (xT, xG) <br> 9) TBD | In Progress |
+| **Data Management**                  | Design and implement a data warehousing solution for football data sources. | 1) Design data warehouse architecture <br> 2) Load historical data into the warehouse <br> 3) Launch regular data loading processes <br> TBD | Planned  |
+| **Advanced Analytics**               | Enhance analytical models for performance assessment.                 | 1) Build xT transition matrix <br> 2) Build an Up-to-Date VAEP Model <br> 3) Increase quality of VAEP | Planned  |
+| **Innovation and Dissemination**     | Utilize innovative channels for disseminating analytics insights.     | - Pilot a Twitter Bot for automated posting                                                         | Planned  |
+| **Community Engagement**             | Engage and grow the project's contributor community.                  | - Foster a community of contributors                                                               | Ongoing |
+| **Quality Assurance**                | Ensure the reliability and accuracy of analytics outputs.             | - Implement robust testing and validation processes                                                 | Ongoing |
+| **Documentation and Tutorials**      | Provide comprehensive guides for utilizing the analytics tools.      | - Develop comprehensive guides and tutorials                                                        | Ongoing |
+
 
 
 ## 1. Pass_map 
