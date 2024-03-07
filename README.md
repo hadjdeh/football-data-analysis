@@ -11,9 +11,9 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 
 | Field                            | Tasks                                           | Planned Date | Status  | Artefacts                                                                                      |
 |----------------------------------|-------------------------------------------------|--------------|---------|------------------------------------------------------------------------------------------------|
-| **Data Processing and Visualization** | Develop Pass Map Template                     | 2024-03-01   | Done ✅   | [Link to Directory](https://github.com/hadjdeh/football-data-analysis/tree/main/Pass_map)         |
-|                                  | Scraping Static FBref Data                     | 2024-03-01   | Done ✅   | [Link to Directory](https://github.com/hadjdeh/football-data-analysis/tree/main/Scraping_fbref_static_data)   |
-|                                  | Develop Team Radar Template                    | 2024-03-09        | In Progress🔄 |                                                                                              |
+| **Data Processing and Visualization** | Develop Pass Map Template                     | 2024-03-01   | Done ✅   | [Link2Dir](https://github.com/hadjdeh/football-data-analysis/tree/main/Pass_map)         |
+|                                  | Scraping Static FBref Data                     | 2024-03-01   | Done ✅   | [Link2Dir](https://github.com/hadjdeh/football-data-analysis/tree/main/Scraping_fbref_static_data)   |
+|                                  | Develop Team Radar Template                    | 2024-03-08        | Done ✅ | [Link2Dir](https://github.com/hadjdeh/football-data-analysis/tree/main/Team_radar)                                                                                             |
 |                                  | Integrate Distribution on Radar Template       | 2024-03-16        | Planned 🔜 |                                                                                              |
 |                                  | Create Player Templates                        |    ❓     | To do |                                                                                              |
 |                                  | Interpolate Carries on Event Data              | 2024-03-16        | Planned 🔜 |                                                                                              |
