@@ -78,3 +78,12 @@ Data Collection Time (MacBook Air M1 8GB): Collecting the entire dataset for the
 
 Data Utilization: It is recommended to use the already available data for the past five seasons and only update with the actual data for the current season.
 
+## 3. Team_radar
+
+
+### Results
+
+<img src="/Team_radar/img/2024-03-06/radar_image/Defending_Radar_Real%20Madrid_Barcelona_2023-2024.jpeg" width="60%" height="auto">
+
+
+
