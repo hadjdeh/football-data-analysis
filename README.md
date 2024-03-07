@@ -6,6 +6,37 @@ Overview
 
 This repository is dedicated to football data analysis, showcasing various Jupyter notebooks that detail the handling and visualization of football data from multiple perspectives. Through these projects, we explore different facets of football analytics, including creating sophisticated pass maps, evaluating player performance metrics, and more, using Python and libraries like Matplotlib and mplsoccer.
 
+
+# Project Roadmap
+
+| Field                            | Tasks                                           | Planned Date | Status  | Artefacts                                                                                      |
+|----------------------------------|-------------------------------------------------|--------------|---------|------------------------------------------------------------------------------------------------|
+| **Data Processing and Visualization** | Develop Pass Map Template                     | 2024-03-01   | Done ✅   | [Link to Directory](https://github.com/hadjdeh/football-data-analysis/tree/main/Pass_map)         |
+|                                  | Scraping Static FBref Data                     | 2024-03-01   | Done ✅   | [Link to Directory](https://github.com/hadjdeh/football-data-analysis/tree/main/Scraping_fbref_static_data)   |
+|                                  | Develop Team Radar Template                    | 2024-03-09        | In Progress🔄 |                                                                                              |
+|                                  | Integrate Distribution on Radar Template       | 2024-03-16        | Planned 🔜 |                                                                                              |
+|                                  | Create Player Templates                        |    ❓     | To do |                                                                                              |
+|                                  | Interpolate Carries on Event Data              | 2024-03-16        | Planned 🔜 |                                                                                              |
+|                                  | Identify Possession Chains                     | 2024-03-16        | Planned 🔜 |                                                                                              |
+|                                  | Visualize Dynamic Metric Changes (xT, xG)      | 2024-03-16        | Planned 🔜 |                                                                                              |
+|                                  | TBD                                             | TBD        | TBD     |                                                                                              |
+| **Data Management**               | Design data warehouse architecture             | 2024-04-01   | Planned 🔜  |                                                                                              |
+|                                  | Load historical data into the warehouse        | 2024-04-07   | Planned 🔜  |                                                                                              |
+|                                  | Launch regular data loading processes          |  ❓  | To do   |                                                                                              |
+|                                  | Quality Assurance                               |  ❓  | To do   |                                                                                              |
+|                                  | TBD                                             |    TBD          | TBD   |                                                                                              |
+| **Advanced Analytics**            | Build xT transition matrix                     | 2024-03-01   | Done  ✅  |                                                                                              |
+|                                  | Build an Up-to-Date baseline VAEP Model        | 2024-03-23   | Planned 🔜    |                                                                                              |
+|                                  | Increasing quality of VAEP                      |   ❓ | To do   |                                                                                              |
+|                                  | TBD                                             |              |         |                                                                                              |
+| **Automation & Integration**      | Pilot a Twitter Bot for automated posting      | 2024-04-13   | Planed   |                                                                                              |
+|                                  | Pilot a Telegram Bot for automated posting     | ❓   | To do   |                                                                                              |
+|                                  | TBD                                             |              |         |                                                                                              |
+
+
+
+
+
 ## 1. Pass_map 
 
 The `Pass_map` directory contains Jupyter notebooks and datasets used for creating advanced pass maps (passing network map). Key components include:
