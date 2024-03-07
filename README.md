@@ -83,7 +83,7 @@ Data Utilization: It is recommended to use the already available data for the pa
 
 ### Results
 
-<img src="/Team_radar/img/2024-03-06/radar_image/Defending_Radar_Real%20Madrid_Barcelona_2023-2024.jpeg" width="60%" height="auto">
+<img src="/Team_radar/img/2024-03-06/radar_image/Defending_Radar_Real%20Madrid_Barcelona_2023-2024.jpeg" width="80%" height="auto">
 
 
 
