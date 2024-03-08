@@ -82,7 +82,7 @@ Data Utilization: It is recommended to use the already available data for the pa
 
 The `Team_radar` directory contains Jupyter notebooks and Python (.py) modules with utility functions used for creating a template similar to StatsBomb for generating Team Radars. The key components include:
 
-- `notebooks/`1. Team radar and statistics table.ipynb: A notebook for team radar visualization.
+- `notebooks/1. Team radar and statistics table.ipynb`: A notebook for team radar visualization.
 - `img/`: A directory containing the resulting radar images and statistics table images.
 - `utils/`: A directory containing modules with utility functions for creating the Radar Map
 
