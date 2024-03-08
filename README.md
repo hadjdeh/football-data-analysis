@@ -11,7 +11,7 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 
 | Field                            | Tasks                                           | Planned Date | Status  | Artefacts                                                                                      |
 |----------------------------------|-------------------------------------------------|--------------|---------|------------------------------------------------------------------------------------------------|
-| **Data Processing and Visualization** | Develop Pass Map Template                     | 2024-03-01   | Done ✅   | [Link2Dir](https://github.com/hadjdeh/football-data-analysis/tree/main/Pass_map)         |
+| **Data Processing and Visualization** | Develop Pass Map Template                     | 2024-03-01   | Done ✅   | [code](https://github.com/hadjdeh/football-data-analysis/tree/main/Pass_map) [article] (https://footsci.medium.com/a-detailed-guide-to-creating-advanced-pass-maps-with-python-and-matplotlib-731d6aa71a94)       |
 |                                  | Scraping Static FBref Data                     | 2024-03-01   | Done ✅   | [Link2Dir](https://github.com/hadjdeh/football-data-analysis/tree/main/Scraping_fbref_static_data)   |
 |                                  | Develop Team Radar Template                    | 2024-03-08        | Done ✅ | [Link2Dir](https://github.com/hadjdeh/football-data-analysis/tree/main/Team_radar)                                                                                             |
 |                                  | Integrate Distribution on Radar Template       | 2024-03-16        | Planned 🔜 |                                                                                              |
@@ -80,10 +80,23 @@ Data Utilization: It is recommended to use the already available data for the pa
 
 ## 3. Team_radar
 
+The `Team_radar` directory contains Jupyter notebooks and Python (.py) modules with utility functions used for creating a template similar to StatsBomb for generating Team Radars. The key components include:
+
+- `notebooks/`1. Team radar and statistics table.ipynb: A notebook for team radar visualization.
+- `img/`: A directory containing the resulting radar images and statistics table images.
+- `utils/`: A directory containing modules with utility functions for creating the Radar Map
+
+The data used for creating the template and plotting up-to-date statistics for teams are provided by the `Scraping_fbref_static_data` directory in the same repository.
+
+For a detailed walkthrough of the process of creating team radars, check out my Medium articles:
+
+- [Article 1](https://footsci.medium.com/create-a-statsbomb-inspired-template-for-team-radar-comparison-using-free-data-from-fbref-1cf99c0ed0f1): Create a StatsBomb-Inspired Template for Team Radar Comparison Using Free Data from FBRef
+
 
 ### Results
 
 <img src="/Team_radar/img/2024-03-06/radar_image/Defending_Radar_Real%20Madrid_Barcelona_2023-2024.jpeg" width="80%" height="auto">
+<img src="/Team_radar/img/2024-03-06/radar_image/Attacking_Radar_Real%20Madrid_Barcelona_2023-2024.jpeg" width="80%" height="auto">
 
 
 
