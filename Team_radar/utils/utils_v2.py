@@ -297,8 +297,8 @@ def plot_radar(df_metrics, df_metrics2, radar_type, color_dict, date, image, rad
     radar = Radar(label_fontsize=9, range_fontsize=9, fontfamily='serif')
 
     # Determine the colors for each team
-    color1 = color_dict.get(team1, '#DB0030')
-    color2 = color_dict.get(team2, '#004D98') if color1 == '#DB0030' else '#DB0030'
+    color1, color2 = determine_team_colors(team1, team2, color_dict)
+
 
     # Setup the title configuration for the radar chart
     title = {
