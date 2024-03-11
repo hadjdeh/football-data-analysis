@@ -197,7 +197,7 @@ class Radar:
         
         if title.get('subtitle_name'):
             ## plot the title name
-            ax.text(-22, 20, title['subtitle_name'], fontsize=title['subtitle_fontsize'], 
+            ax.text(-22, 18, title['subtitle_name'], fontsize=title['subtitle_fontsize'], 
                     fontdict={'color': title['subtitle_color']}, fontfamily=self.fontfamily)
 
         if title.get('title_color_2') == None:

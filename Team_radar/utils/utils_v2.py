@@ -3,6 +3,9 @@ import numpy as np
 from matplotlib import pyplot as plt
 import dataframe_image as dfi
 import numpy as np
+import matplotlib as mpl
+import seaborn as sns
+import matplotlib.patches as mpatches
 from radar_plot import *
 from utils import *
 
@@ -114,6 +117,8 @@ def preprocessing_df_metric(df_metrics, df_team_now, radar_type, radar_order=Non
             # Swap team names and their associated games
             team1, team2 = team2, team1
             games1, games2 = games2, games1
+            league1, league2 = league2, league1
+
     else:
         # Apply different logic based on the radar type
         if radar_type == 'Defending Radar':
@@ -125,6 +130,8 @@ def preprocessing_df_metric(df_metrics, df_team_now, radar_type, radar_order=Non
                 # Swap team names and their associated games
                 team1, team2 = team2, team1
                 games1, games2 = games2, games1
+                league1, league2 = league2, league1
+
         elif radar_type == 'Attacking Radar':
             # If team1's percentile is higher than team2's more than half the time, reorder the columns
             if (df_[col2] > df_[col4]).sum() > df_[col1].shape[0] / 2:
@@ -134,6 +141,7 @@ def preprocessing_df_metric(df_metrics, df_team_now, radar_type, radar_order=Non
                 # Swap team names and their associated games
                 team1, team2 = team2, team1
                 games1, games2 = games2, games1
+                league1, league2 = league2, league1
 
     df_ = df_.T.reset_index().set_index('team').T
 
@@ -248,7 +256,7 @@ def style_dataframe(df, indexes, columns, color1, color2):
     return styler
 
 
-def plot_radar(df_metrics, df_metrics2, radar_type, color_dict, date, image, radar_order=None):
+def plot_radar(df_metrics, df_metrics2, radar_type, color_dict, date, image, radar_order=None, team_name=None):
     """
     Generates and displays a radar chart for comparing two teams based on their performance metrics,
     and displays an image with percentiles and statistcs  alongside the radar chart. The function also saves the generated figure.
@@ -284,6 +292,7 @@ def plot_radar(df_metrics, df_metrics2, radar_type, color_dict, date, image, rad
     # Extract the season for naming the output file
     season = df_metrics2.loc['season'].values[0]
 
+
     # Compute ranges for the radar from the 5th and 95th percentiles
     ranges = df_metrics.iloc[1:, :][['p5', 'p95']].apply(lambda x: (x[0], x[1]), axis=1).tolist()
     # Extract and convert values for plotting
@@ -300,16 +309,30 @@ def plot_radar(df_metrics, df_metrics2, radar_type, color_dict, date, image, rad
     color1, color2 = determine_team_colors(team1, team2, color_dict)
 
 
+    if team_name != None:
+        competition = df_metrics2[team_name]['competition']
+        games = df_metrics2[team_name]['90s played']
+        values = df_metrics2[team_name].iloc[4:]
+        
+        colormap = mpl.cm.get_cmap('RdYlBu')
+        norm = mpl.colors.Normalize(vmin=0, vmax=1)
+        # color1 = colormap(norm(0.1))
+        # color2 = colormap(norm(0.9))
+        color1 = color_dict[team_name][0]
+        color2 = color_dict[team_name][1]
+        subtitle = competition + '\n' + season + '\n' + games + ' games'+ '\n' + date
+
     # Setup the title configuration for the radar chart
     title = {
-        'title_name': team1,
+        'title_name': team1 if team_name is None else team_name,
         'title_color': color1,
-        'title_name_2': team2,
+        'title_name_2': team2 if team_name is None else '',
+        'subtitle_name': '' if team_name is None else subtitle,
         'title_color_2': color2,
-        'title_fontsize': 22,
+        'title_fontsize': 21,
         'subtitle_fontsize': 15,
         'title_description': radar_type,
-        'title_description_color': 'gray',
+        'title_description_color': 'gray' if team_name is None else 'black',
         'title_description_fontsize': 18
     }
 
@@ -322,12 +345,12 @@ def plot_radar(df_metrics, df_metrics2, radar_type, color_dict, date, image, rad
     # Plot the radar chart on the first subplot
     radar.plot_radar(ranges=ranges, 
                      params=params, 
-                     values=np.stack([values1, values2]), 
+                     values=np.stack([values1, values2]) if team_name is None else values, 
                      radar_color=[color1, color2],
                      title=title, 
                      endnote=endnote, dpi=1500,
                      fontfamily='serif', 
-                     compare=True,
+                     compare=True if team_name is None else False,
                      alphas=[0.4, 0.4], 
                      figax=(fig, ax[0]))
 
@@ -339,7 +362,7 @@ def plot_radar(df_metrics, df_metrics2, radar_type, color_dict, date, image, rad
 
     # Construct file name and path for saving the radar chart image
     rt = '_'.join(radar_type.split(' '))
-    FILE_NAME = f'{rt}_{team1}_{team2}_{season}.jpeg'
+    FILE_NAME = f'{rt}_{team1}_{team2}_{season}.jpeg' if team_name is None else f'{rt}_dist_{team_name}_{season}.jpeg'
     PATH = f'../img/{date}/radar_image/'
 
     # Save the figure with high resolution
@@ -347,6 +370,176 @@ def plot_radar(df_metrics, df_metrics2, radar_type, color_dict, date, image, rad
 
     # Show the plot as output
     plt.show()
+
+
+
+def get_dist(df_old, df_now, df_metrics, team_name, metrics_dict, radar_type, date):
+    """
+    Plots distribution graphs for a specified team's performance metrics.
+
+    Parameters:
+    - df_old: DataFrame containing old performance metrics.
+    - df_now: DataFrame containing current performance metrics (unused in current implementation).
+    - df_metrics: DataFrame with specific metrics to be visualized.
+    - team_name: Name of the team for which the metrics are plotted.
+    - metrics_dict: Dictionary mapping metric names to their aliases.
+    """
+    # Customize the appearance of the plots
+    mpl.rcParams['axes.spines.left'] = False
+    mpl.rcParams['axes.spines.right'] = False
+    mpl.rcParams['axes.spines.top'] = False
+    mpl.rcParams['axes.spines.bottom'] = True
+    
+    # Select the metrics to be plotted
+    df_metrics_ = df_metrics.iloc[4:]
+    n_axes = df_metrics_.shape[0]
+    
+    season = df_metrics.loc['season'].values[0]
+    
+    # Create subplots for each metric
+    fig, ax = plt.subplots(n_axes,1, figsize=(20,n_axes *2.1 ))
+    
+    
+    for num, metric_name in enumerate(df_metrics_.index):
+        
+        series = df_old[metrics_dict[metric_name]['m']]
+        metric_value = df_metrics_[team_name][metric_name]
+        metric_type = metrics_dict[metric_name]['type']
+        
+        # Calculate percentile values and the minimum and maximum of the series
+        metric_p_5 = round(np.percentile(series,5),2)
+        metric_p_95 = round(np.percentile(series,95),2)
+        metric_min = round(series.min(),2)
+        metric_max = round(series.max(),2)
+        perc_metric = get_perc_by_metric(metric_value, series, metric_type)
+        
+        
+        # Set the color map based on the metric type
+        colourmap = mpl.cm.get_cmap('RdYlBu').reversed() if metric_type == 1 else mpl.cm.get_cmap('RdYlBu')
+        
+    
+        if metric_min >= 0:
+            ax[num].set_xlim(0, metric_max*1.15)
+        else:
+            print('neg')
+            ax[num].set_xlim(metric_min*1.1, metric_max*1.4)
+            
+        if metric_type == 0:
+            
+            ax[num].invert_xaxis()
+            metric_p_5, metric_p_95 = metric_p_95, metric_p_5
+            
+            if metric_min >= 0:
+                ax[num].set_xlim(metric_max*1.15, 0)
+            else:
+                print('neg')
+                ax[num].set_xlim(metric_min*1.1, metric_max*1.4)
+                
+                
+        # Plot the distribution of the metric
+        sns.kdeplot(series, bw=0.45, color='lightgray', ax=ax[num],gridsize=400)
+
+        # Highlight the metric value with an arrow
+        y_lim_max = ax[num].get_ylim()[1]
+        ax[num].annotate("", xy=(metric_value, 0), xytext=(metric_value, y_lim_max*0.04),
+                     arrowprops=dict(arrowstyle="<|-", color='blue',linewidth=3), 
+                     fontsize=15)        
+        
+        
+        # Color the distribution based on percentile values
+        kde_x, kde_y = ax[num].lines[0].get_data()
+
+        vmin = metric_p_5 if metric_p_5 < metric_p_95 else metric_p_95
+        vmax = metric_p_95 if metric_p_5 < metric_p_95 else metric_p_5
+        normalize = mpl.colors.Normalize(vmin=vmin, vmax=vmax)
+
+        npts = 400
+        for i in range(npts - 1):
+            ax[num].fill_between([kde_x[i], kde_x[i+1]],
+                                 [kde_y[i], kde_y[i+1]],
+                                  color=colourmap(normalize(kde_x[i])),
+                                  alpha=1)
+            ax[num].fill_between(kde_x, kde_y, 
+                                 where=(kde_x>metric_value if metric_type == 1 else kde_x<metric_value),
+                                 color='lightgray')
+            
+        # Add a legend to the plot
+        ax[num].legend([
+#                     '',
+            f'{round(metric_value,2)}',
+            f'P {perc_metric}',
+       ], fontsize=15, loc=4)
+
+        legend_entries = [
+        mpatches.Patch(color='none', label=f'{round(metric_value,2)}'),  
+        mpatches.Patch(color='none', label=f'P{perc_metric}')            
+        ]   
+
+        leg = ax[num].legend(handles=legend_entries, fontsize=15, loc=4, ncol=2, 
+              handlelength=0, handletextpad=-1.5, frameon=False)
+    
+        text1 = leg.texts[1]
+        color = colourmap(normalize(metric_value))
+#         color = tuple([i+0.4  if (n == 2) & (i<0.3) else i for n, i in enumerate(color)])
+        text1.set_color(color)
+        text1.set_weight('bold')
+
+        text2 = leg.texts[0]
+        text2.set_color('blue')
+        text2.set_weight('bold')
+    
+        ax[num].set_xlabel('')
+        ax[num].set_yticks([])
+        ax[num].set_xticks([])
+        metric_name_ = metric_name.replace('C.','')
+        ax[num].set_ylabel(metric_name_ if len(metric_name_.split(' ',1)) == 1 else 
+                           metric_name_.split(' ',1)[0] + '\n' + metric_name_.split(' ',1)[1], 
+                           fontweight='semibold',fontfamily='serif',fontsize=20, rotation=0)
+        ax[num].yaxis.set_label_coords(-0.05,0.3)
+    
+    
+        round_ = 2 if abs(metric_max - metric_min) < 2 else 1
+
+        if metric_type == 1:
+            if metric_min >= 0:
+                x_lim_min = 0
+                x_lim_max = round(metric_max,round_)
+            else:
+                x_lim_min = metric_min
+                x_lim_max = round(metric_max,round_)
+        elif metric_type == 0:
+            if metric_min >= 0:
+                x_lim_min = round(metric_max,round_)
+                x_lim_max = 0
+            else:
+                x_lim_min = metric_min
+                x_lim_max = round(metric_max,round_)   
+                
+
+        ax[num].axvline(round(metric_p_5,round_), ls='--', c='gray')
+        ax[num].axvline(round(metric_p_95,round_), ls='--', c='gray')
+
+        ax[num].set_xticks([x_lim_min, round(metric_p_5,round_), round(metric_p_95,round_), x_lim_max])
+        ax[num].tick_params(axis='x', labelsize=14, pad=5)
+        
+    plt.subplots_adjust(hspace=0.5)
+    
+    ax[0].set_title('Distributions', fontsize=40, fontweight='bold', pad=60,
+                   fontfamily='serif', color='black')
+    
+    
+    # Create the file name and path for saving the distri image
+    rt = '_'.join(radar_type.split(' '))
+    FILE_NAME = f'Distri_{rt}_{team_name}_{date}_{season}.jpeg'
+    PATH = f'../img/{date}/distri_image/'
+
+    fig.savefig(PATH + FILE_NAME, bbox_inches='tight', dpi=400)
+    plt.close(fig)
+
+    # Load and return the image
+    image = plt.imread(PATH + FILE_NAME)
+    return image
+
 
 
 
