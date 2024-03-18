@@ -1,0 +1,15 @@
+pathlib==1.0.1
+mplsoccer==1.0.2
+mycolorpy==1.5.1
+numpy==1.26.4
+pandas==2.2.1
+fuzzywuzzy==0.18.0
+tqdm==4.65.0
+mplsoccer==1.0.2
+mycolorpy==1.5.1
+highlight_text==0.2
+matplotlib==3.7.1
+numpy==1.26.4
+scipy==1.10.1
+seaborn==0.12.2
+cmasher==1.6.3
