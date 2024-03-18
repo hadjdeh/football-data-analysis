@@ -15,7 +15,7 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 |                                  | Scraping Static FBref Data                     | 2024-03-01   | Done ✅   | [code](https://github.com/hadjdeh/football-data-analysis/tree/main/Scraping_fbref_static_data)   |
 |                                  | Develop Team Radar Template                    | 2024-03-08        | Done ✅ | [code](https://github.com/hadjdeh/football-data-analysis/tree/main/Team_radar) [article](https://footsci.medium.com/create-a-statsbomb-inspired-template-for-team-radar-comparison-using-free-data-from-fbref-1cf99c0ed0f1)                                                                                            |
 |                                  | Integrate Distribution on Radar Template       | 2024-03-12        | Done ✅ | [code](https://github.com/hadjdeh/football-data-analysis/blob/main/Team_radar/notebooks/2.%20Team%20radar%20and%20distribution.ipynb)                                                                                              |
-|                                  | Shot map       | 2024-03-19        | In progress 🔄 |                                                                                              |
+|                                  | Shots and Goals map       | 2024-03-19        | Done ✅ |    [code](https://github.com/hadjdeh/football-data-analysis/blob/main/Shots_and_goals_map/notebooks/1.Shot_and_goal_map_with_ratings.ipynb) [article] (https://footsci.medium.com/plot-shots-goals-maps-with-python-mplsoccer-ranking-players-by-xg-shots-and-goals-per-90-16afa7c74b9a)                                                                                          |
 |                                  | Create Player Templates                        |    ❓     | To do |                                                                                              |
 |                                  | Interpolate Carries on Event Data              | 2024-03-24        | Planned 🔜 |                                                                                              |
 |                                  | Identify Possession Chains                     | 2024-03-24        | Planned 🔜 |                                                                                              |
@@ -106,3 +106,9 @@ For a detailed walkthrough of the process of creating team radars, check out my 
 
 <img src="/Team_radar/img/2024-03-12/radar_image/Defending_Radar_dist_Napoli_2023-2024.jpeg" width="80%" height="auto">
 <img src="/Team_radar/img/2024-03-12/radar_image/Defending_Radar_dist_Barcelona_2023-2024.jpeg" width="80%" height="auto">
+
+## 3. Shots_and_goals_map
+
+### Results
+
+<img src="/football-data-analysis/blob/main/Shots_and_goals_map/img/2024-03-18/Europe/shot_map_top9_in_Europe_by_np%20Goals.jpeg" width="80%" height="auto">
