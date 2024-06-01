@@ -23,8 +23,8 @@ This repository is dedicated to football data analysis, showcasing various Jupyt
 |                                  | Identify Possession Chains                     | 2024-06-01        | Planned 🔜 |                                                                                              |
 |                                  | Visualize Dynamic Metric Changes (xT, xG)      | 2024-06-01        | Planned 🔜 |                                                                                              |
 |                                  | TBD                                             | TBD        | TBD     |                                                                                              |
-| **Data Management**               | Design data warehouse architecture             | 2024-06-01   | Planned 🔜  |                                                                                              |
-|                                  | Load historical data into the warehouse        | 2024-06-01   | Planned 🔜  |                                                                                              |
+| **Data Management**               | Design data warehouse architecture             |  ❓  | To do  |                                                                                              |
+|                                  | Load historical data into the warehouse        |  ❓  | To do  |                                                                                              |
 |                                  | Launch regular data loading processes          |  ❓  | To do   |                                                                                              |
 |                                  | Quality Assurance                               |  ❓  | To do   |                                                                                              |
 |                                  | TBD                                             |    TBD          | TBD   |                                                                                              |
